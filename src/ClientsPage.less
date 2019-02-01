@@ -1,23 +1,18 @@
-@import "../../theme/colors";
+@import "./vars";
 
 body {
-
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   background-color: @body_background;
-
 }
 
 .content_wrapper {
-
   text-align: center;
   font-family: @main_font;
-
 }
 
 .content_wrapper_inner {
-
   display: inline-block;
   width: 100%;
   max-width: 960px;
@@ -26,29 +21,26 @@ body {
   text-align: left;
 
   .route_title {
-
     h1 {
+      margin: 30px 0;
       font-weight: 200;
       font-size: 42px;
       line-height: 100%;
-      margin: 30px 0;
+
+      @media @tablet {
+        padding: 0 40px;
+      }
+
+      @media @mobile {
+        font-size: 2.2rem;
+      }
     }
-
   }
-
 }
 
 .users_list_wrapper {
-
   margin-top: 40px;
-
-}
-
-.pagination_wrapper {
-
-  text-align: center;
-  margin-top: 40px;
-
+  border-spacing: 0;
 }
 
 .no_wrap {
@@ -61,3 +53,15 @@ body {
   clear: both;
 }
 
+.errorbox {
+  padding: 20px;
+  text-align: center;
+  border: 3px solid @red;
+  box-shadow: 0 0 5px #AAA inset;
+}
+
+.infobox {
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px #CCC inset;
+}
