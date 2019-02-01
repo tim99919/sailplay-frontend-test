@@ -1,4 +1,4 @@
-## [Demo](https://sailplay-filter-aaquqe0t1.now.sh/)
+## [Demo](https://sailplay-filter.now.sh/)
 
 ## Request params
 
