@@ -1,24 +1,41 @@
-# Тестовое задание для фронт-енд разработчика
+## [Demo](https://sailplay-filter.now.sh/)
 
-## Список с фильтрами
+## Request params
 
-Написать одностраничное приложение с одним роутом.
-Список с фильтрами.
+* `name` (`?name=Adeline%20Ortiz`)
+* `date_from`, `date_to` (`?date_from=2015-02-01&date_to=2018-02-01`)
+* `earned_from`, `earned_to`
+* `spent_from`, `spent_to`
 
-### Материалы:
-- Базовая верстка находится в файле `./index.html`.
-- Необходимые стили `./src/theme/colors.less`.
-- Данные находятся в директории `./data`.
+## Notes
 
-### Требования
-- Заголовки списка кликабельны, действие при нажатии – сортировка.
-- Фильтры разделены на группы: строка поиска, дата регистрации, баллы. Группы состоящие из нескольких инпутов могут быть свернуты.
-- Фильтры ограничены максимальным и минимальным значениями. Лимиты в файле `./data/search_limits.json`. Кнопка сбросить очищает фильтры до мин. и макс. значений.
-- Фильтры принимают значения из адресной строки (формат не важен, в качестве примера параметры указаны в виде JSON строки).
-- Между фильтрами "И", то есть условия должны совпадать для всех фильтров сразу.
-- Поиск регистро-независимый. 
-- В левом нижнем углу блока фильтров отображается количество отфильтрованных пользователей.
+For local testing apply patch:
 
-Задание оформить в отдельной ветке. Назвать ее на ваше усмотрение, например: имя_фамилиякандидата, и приложить пулл-реквест.
+```diff
+--- node_modules/react-input-range/lib/js/index.js
++++ node_modules/react-input-range/lib/js/index.js
+@@ -54,5 +54,5 @@
+  */
 
-![Список с фильтрами](./data/test_design_expanded.png)
+ exports.default = _inputRange2.default;
+-module.exports = exports.default;
++module.exports = exports;
+ //# sourceMappingURL=index.js.map
+```
+
+## Development
+
+### Local
+
+```sh
+yarn install
+yarn start
+yarn run webpack
+```
+
+### Production build
+
+```sh
+yarn run build
+yarn run webpack:production
+```

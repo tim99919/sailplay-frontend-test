@@ -1,0 +1,28 @@
+@import "./vars";
+
+.pagination {
+  padding: 0 15px;
+  list-style: none;
+  text-align: center;
+  color: @darkGray;
+
+  .page-item {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.9em;
+    cursor: pointer;
+    
+    &:hover {
+      background: @lighterWhite;
+    }
+  }
+
+  .page-item.active {
+    background: @darkerBlue;
+    color: @white;
+  }
+}
