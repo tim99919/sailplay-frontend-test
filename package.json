@@ -1,19 +1,31 @@
 {
   "name": "sailplay-frontend-test",
   "version": "0.0.1",
-  "description": "Тестовое задание на позицию фронт-енд разработчика",
-  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^4.1.0",
+    "craco-less": "^1.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iamthegoodbot/sailplay-frontend-test.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "author": "sailplay",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iamthegoodbot/sailplay-frontend-test/issues"
-  },
-  "homepage": "https://github.com/iamthegoodbot/sailplay-frontend-test#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
